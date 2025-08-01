@@ -25,7 +25,7 @@ module Myapp
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Don't generate system test files.
-    config.generators.system_tests = nill
+    config.generators.system_tests = nil
     config.generators do |g|
       g.skip_routes true # ルーティングの記述を加えない
       g.helper false # ヘルパーファイルを自動生成しない
