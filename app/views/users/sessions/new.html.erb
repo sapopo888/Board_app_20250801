@@ -1,6 +1,6 @@
 <div class='flex flex-col items-center justify-center min-h-screen bg-gray-100'>
   <div class='bg-white shadow-lg rounded-lg px-10 py-12 w-full max-w-md'>
-    <h1 class='text-4xl font-bold text-center text-blue-900 mb-8'>Log in</h1>
+    <h1 class='text-4xl font-bold text-center text-blue-900 mb-8'><%= t('devise.sessions.new.title') %></h1>
   
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="mb-6">
@@ -14,7 +14,7 @@
       </div>
     
       <div class="text-center">
-        <%= f.submit "Log in", class: 'w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition duration-300' %>
+        <%= f.submit t('devise.sessions.new.sign_in'), class: 'w-full bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition duration-300' %>
       </div>
     <% end %>
     </div>
