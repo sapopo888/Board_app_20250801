@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div class="bg-white shadow-lg rounded-lg px-10 py-12 w-full max-w-md">
+    <h1 class="text-4xl font-bold text-center text-blue-900 mb-8"><%= t('post.index.title') %></h1>
+
+    <% if @posts.present? %>
+      <div class="space-y-6">
+        <% @posts.each do |post| %>
+          <div class="border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
+            <p><%= l post.created_at, format: :short %></p>
+            <h2 class="text-xl font-semibold text-blue-900 mb-2"><%= post.title %></h2>
+            <p class="text-gray-700"><%= post.body %></p>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p class="text-gray-500 text-center"><%= t('post.index.no_posts') %></p>
+    <% end %>
+  </div>
+</div>
