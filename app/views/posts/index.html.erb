@@ -1,0 +1,11 @@
+<h1>Post index</h1>
+
+<% if @posts.present? %>
+  <% @posts.each do |post| %>
+    <%= post.title %>
+    <%= post.body %>
+  <% end %>
+<% else %>
+  記事は存在しません。
+<% end %>
+
