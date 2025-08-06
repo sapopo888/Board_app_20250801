@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.includes(:user)
+    @posts = Post.includes(:user) #全てのユーザーが全ての投稿を閲覧可能
+    # @posts = current_user.posts # 現在ログインしているユーザーの投稿のみ閲覧可能
   end
 
   def new
