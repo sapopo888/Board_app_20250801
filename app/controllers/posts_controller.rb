@@ -11,10 +11,10 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = '記事が投稿されました。'
+      flash[:success] = t('flash_message.post.success')
       redirect_to posts_path, status: :see_other
     else
-      flash.now[:danger] = '記事の投稿に失敗しました。'
+      flash.now[:danger] = t('flash_message.post.fail')
       render :new, status: :unprocessable_entity
     end
   end
