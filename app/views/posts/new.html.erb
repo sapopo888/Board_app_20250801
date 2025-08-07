@@ -3,6 +3,8 @@
     <h1 class="text-3xl font-bold text-center text-blue-900 mb-8"><%= t('post.new.title') %></h1>
 
     <%= form_with model: @post, class: "new_post" do |f| %>
+      <%= render "users/shared/error_messages", resource: @post %>
+
       <div class="mb-6">
         <%= f.label :title, class: "block text-blue-900 font-semibold mb-2" %>
         <%= f.text_field :title, class: "w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800" %>
