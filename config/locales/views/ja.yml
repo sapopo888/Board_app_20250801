@@ -21,3 +21,7 @@ ja:
       no_posts: 記事は存在しません。
     new:
       title: 記事作成
+  flash_message:
+    post:
+      success: 記事を投稿しました。
+      fail: 記事の投稿に失敗しました。

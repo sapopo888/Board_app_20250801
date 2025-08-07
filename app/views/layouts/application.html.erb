@@ -25,12 +25,15 @@
   <body>
     <header>
       <% if user_signed_in? %>
-        <%= render 'shared/signin_header' %>
+        <%= render 'users/shared/signin_header' %>
       <% elsif (user_signed_in? == false) && !(controller_name == 'top' && action_name == 'index') %>
-        <%= render 'shared/not_signin_header' %>
+        <%= render 'users/shared/not_signin_header' %>
       <% else %>
       <% end %>
     </header>
+
+    <%= render 'users/shared/flash_message' %>
+
     <%= yield %>
   </body>
 </html>
