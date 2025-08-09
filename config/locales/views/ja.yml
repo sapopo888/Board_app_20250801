@@ -29,3 +29,5 @@ ja:
       not_created: 記事の投稿に失敗しました。
       updated: 記事を更新しました。
       not_updated: 記事の更新に失敗しました。
+      deleted: 記事を削除しました。
+      confirm: 削除しますか？
