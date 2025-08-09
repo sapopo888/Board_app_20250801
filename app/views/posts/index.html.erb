@@ -1,14 +1,32 @@
 <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-  <div class="bg-white shadow-lg rounded-lg px-10 py-12 mt-8 w-full max-w-md">
+  <div class="bg-white shadow-lg rounded-lg px-10 py-12 mt-8 w-full max-w-lg">
     <h1 class="text-3xl font-bold text-center text-blue-900 mb-8"><%= t('post.index.title') %></h1>
 
     <% if @posts.present? %>
       <div class="space-y-6">
         <% @posts.each do |post| %>
           <div class="border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition duration-200">
-            <p><%= l post.created_at, format: :short %></p>
-            <h2 class="text-xl font-semibold text-blue-900 mb-2"><%= post.title %></h2>
-            <p class="text-gray-700"><%= post.body %></p>
+            <span class='flex space-x-1 items-center'>
+              <!-- Heroicons: calendar -->
+              <svg xmlns="http://www.w3.org/2000/svg"
+                  fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor"
+                  class="w-4 h-4 text-gray-400">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 9h18M4.5 7.5h15a1.5 1.5 0 011.5 1.5v10.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 19.5V9a1.5 1.5 0 011.5-1.5z"/>
+              </svg>
+              <p><%= l post.created_at, format: :default %></p>
+            </span>
+            <hr class='text-gray-200 mb-2'>
+            <%= link_to post.title, post_path(post), class: "text-xl font-semibold text-blue-900" %>
+            <p class="text-gray-700 py-4"><%= post.body %></p>
+            <div class='flex '>
+              <div class='mx-auto space-x-2.5 mr-4'>
+                <%= link_to t('post.index.edit'), edit_post_path(post), class: 'border rounded px-2 py-1 bg-yellow-500 text-white hover:bg-yellow-600' %>
+                <%= link_to t('post.index.delete'), post_path(post), data: { turbo_method: :delete, turbo_confirm: '削除しますか？' }, class: 'border rounded px-2 py-1 bg-red-500 text-white hover:bg-red-600' %>
+              </div>
+            </div>
+
           </div>
         <% end %>
       </div>
