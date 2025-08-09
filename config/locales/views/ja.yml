@@ -19,10 +19,15 @@ ja:
     index:
       title: 記事一覧
       no_posts: 記事は存在しません。
+      edit: 編集
+      delete: 削除
     new:
       title: 記事作成
     edit:
       title: 記事編集
+    show:
+      edit: 編集
+      delete: 削除
   flash_message:
     post:
       created: 記事を投稿しました。

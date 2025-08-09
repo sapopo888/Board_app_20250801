@@ -22,8 +22,8 @@
             <p class="text-gray-700 py-4"><%= post.body %></p>
             <div class='flex '>
               <div class='mx-auto space-x-2.5 mr-4'>
-                <%= link_to '編集', edit_post_path(post), class: 'border rounded px-2 py-1 bg-yellow-500 text-white hover:bg-yellow-600' %>
-                <%= link_to '削除', post_path(post), data: { turbo_method: :delete, turbo_confirm: '削除しますか？' }, class: 'border rounded px-2 py-1 bg-red-500 text-white hover:bg-red-600' %>
+                <%= link_to t('post.index.edit'), edit_post_path(post), class: 'border rounded px-2 py-1 bg-yellow-500 text-white hover:bg-yellow-600' %>
+                <%= link_to t('post.index.delete'), post_path(post), data: { turbo_method: :delete, turbo_confirm: '削除しますか？' }, class: 'border rounded px-2 py-1 bg-red-500 text-white hover:bg-red-600' %>
               </div>
             </div>
 
