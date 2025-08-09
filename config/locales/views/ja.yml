@@ -21,6 +21,8 @@ ja:
       no_posts: 記事は存在しません。
     new:
       title: 記事作成
+    edit:
+      title: 記事編集
   flash_message:
     post:
       success: 記事を投稿しました。

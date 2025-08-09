@@ -23,6 +23,10 @@ class PostsController < ApplicationController
     @post = current_user.posts.find(params[:id])
   end
 
+  def edit
+    @post = current_user.posts.find(params[:id])
+  end
+
   private
 
   def post_params
