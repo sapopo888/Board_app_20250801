@@ -11,10 +11,10 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = t("flash_message.post.success")
+      flash[:success] = t("flash_message.post.created")
       redirect_to posts_path, status: :see_other
     else
-      flash.now[:danger] = t("flash_message.post.fail")
+      flash.now[:danger] = t("flash_message.post.not_created")
       render :new, status: :unprocessable_entity
     end
   end
@@ -25,6 +25,17 @@ class PostsController < ApplicationController
 
   def edit
     @post = current_user.posts.find(params[:id])
+  end
+
+  def update
+    @post = current_user.posts.find(params[:id])
+    if @post.update(post_params)
+      flash[:success] = t('flash_message.post.updated')
+      redirect_to posts_path(@post)
+    else
+      flash.now[:danger] = t('flash_message.post.not_updated')
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private

@@ -25,5 +25,7 @@ ja:
       title: 記事編集
   flash_message:
     post:
-      success: 記事を投稿しました。
-      fail: 記事の投稿に失敗しました。
+      created: 記事を投稿しました。
+      not_created: 記事の投稿に失敗しました。
+      updated: 記事を更新しました。
+      not_updated: 記事の更新に失敗しました。
