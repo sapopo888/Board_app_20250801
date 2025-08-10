@@ -1,5 +1,5 @@
 <% flash.each do |message_type, message| %>
-  <% if message_type.to_sym == :success || :notice %>
+  <% if message_type.to_sym == :success || message_type.to_sym == :notice %>
     <div class='w-full h-10 bg-green-200'>
       <div class='text-green-800'>
         <%= message %>
