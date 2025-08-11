@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # @posts = Post.includes(:user) # 全てのユーザーが全ての投稿を閲覧可能
     @posts = current_user.posts # 現在ログインしているユーザーの投稿のみ閲覧可能
   end
 
