@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @posts = current_user.posts # 現在ログインしているユーザーの投稿のみ閲覧可能
+    @posts = current_user.posts.order(created_at: :desc) # 現在ログインしているユーザーの投稿のみ閲覧可能
   end
 
   def new
