@@ -1,5 +1,6 @@
 <div class='flex w-full h-20 bg-blue-900 text-white'>
   <div class="ms-auto space-x-6 mr-10 mt-8">
+    <%= link_to 'みんなのブログ', users_all_posts_path %>
     <%= link_to t('header.posts_index'), posts_path %>
     <%= link_to t('header.create_post'), new_post_path %>
     <%= link_to t('header.my_page'), '#'%>
