@@ -1,21 +1,21 @@
 <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-  <h1 class="text-3xl font-bold text-blue-900 mb-8">
-    <%= Date.today.strftime('%m月%d日') %> みんなの投稿一覧
+  <h1 class="text-3xl font-bold text-blue-900 mb-8 mt-8">
+    <%= Date.today.strftime('%m月%d日') %> のみんなのブログ
   </h1>
 
   <div id="book" class="w-full max-w-4xl">
     <% if @posts.present? %>
       <% @posts.each do |post| %>
         <div class="post bg-white rounded-lg shadow-md p-6 mb-6">
-          <div class="block text-sm text-gray-500 mb-2">
-            <%= post.created_at.strftime('%Y年%m月%d日 %H:%M') %>
-            <%= post.user.name %>
+          <div class="flex flex-col text-sm text-gray-500 mb-2 mt-4 space-y-2">
+            <p><%= post.created_at.strftime('%Y年%m月%d日 %H:%M') %></p>
+            <p>投稿者：<%= post.user.name %></p>
           </div>
-          <hr>
-          <h2 class="text-xl font-semibold text-blue-900 mb-3">
+          <hr class="text-gray-200">
+          <h2 class="text-center text-xl font-semibold text-blue-900 mb-3 mt-6">
             <%= post.title %>
           </h2>
-          <div class="text-gray-800 leading-relaxed">
+          <div class="text-gray-800 leading-relaxed text-center">
             <%= simple_format(h(post.body)) %>
           </div>
         </div>
