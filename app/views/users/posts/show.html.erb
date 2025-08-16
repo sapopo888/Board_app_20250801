@@ -34,9 +34,9 @@
 
     <!-- 操作ボタン -->
     <div class="flex justify-end gap-3">
-      <%= link_to t('post.show.edit'), edit_post_path(@post), 
+      <%= link_to t('post.show.edit'), edit_user_post_path(@post), 
           class: 'px-4 py-2 rounded-lg bg-yellow-500 text-white font-semibold shadow hover:bg-yellow-600 transition-colors duration-200' %>
-      <%= link_to t('post.show.delete'), post_path(@post),
+      <%= link_to t('post.show.delete'), user_post_path(@post),
           data: { turbo_method: :delete, turbo_confirm: t('flash_message.post.confirm') } ,
           class: 'px-4 py-2 rounded-lg bg-red-600 text-white font-semibold shadow hover:bg-red-700 transition-colors duration-200' %>
     </div>

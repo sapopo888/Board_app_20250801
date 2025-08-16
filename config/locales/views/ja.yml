@@ -28,6 +28,9 @@ ja:
     show:
       edit: 編集
       delete: 削除
+  all_post:
+    index:
+      title: みんなの日記帳
   flash_message:
     post:
       created: 記事を投稿しました。

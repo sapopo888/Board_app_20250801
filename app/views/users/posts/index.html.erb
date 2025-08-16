@@ -18,12 +18,12 @@
               <p><%= l post.created_at, format: :default %></p>
             </span>
             <hr class='text-gray-200 mb-2'>
-            <%= link_to post.title, post_path(post), class: "text-xl font-semibold text-blue-900" %>
+            <%= link_to post.title, user_post_path(@user, post), class: "text-xl font-semibold text-blue-900" %>
             <p class="text-gray-700 py-4"><%= post.body %></p>
             <div class='flex '>
               <div class='mx-auto space-x-2.5 mr-4'>
-                <%= link_to t('post.index.edit'), edit_post_path(post), class: 'border rounded px-2 py-1 bg-yellow-500 text-white hover:bg-yellow-600' %>
-                <%= link_to t('post.index.delete'), post_path(post), data: { turbo_method: :delete, turbo_confirm: '削除しますか？' }, class: 'border rounded px-2 py-1 bg-red-500 text-white hover:bg-red-600' %>
+                <%= link_to t('post.index.edit'), edit_user_post_path(@user, post), class: 'border rounded px-2 py-1 bg-yellow-500 text-white hover:bg-yellow-600' %>
+                <%= link_to t('post.index.delete'), user_post_path(@user, post), data: { turbo_method: :delete, turbo_confirm: '削除しますか？' }, class: 'border rounded px-2 py-1 bg-red-500 text-white hover:bg-red-600' %>
               </div>
             </div>
 
