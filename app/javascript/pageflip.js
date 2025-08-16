@@ -7,4 +7,4 @@
     startPage: 1,
   });
 
-  pageFlip.loadFromHTML(document.querySelectorAll('.post'));
+  pageFlip.loadFromHTML(document.querySelectorAll('.page'));
