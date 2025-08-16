@@ -4,9 +4,9 @@
   </h1>
 
   <div id="book" class="w-full max-w-4xl">
-    <div class='page items-center justify-center text-xl font-bold'><%= Date.today.strftime('%m月%d日') %> のみんなのブログ</div>
     <% if @posts.present? %>
       <% @posts.each do |post| %>
+        <div class='page bg-white text-center text-xl font-bold'><%= Date.today.strftime('%m月%d日') %><%= t('all_post.index.title') %></div>
         <div class="page bg-white rounded-lg shadow-md p-6 mb-6">
           <div class="flex flex-col text-sm text-gray-500 mb-2 mt-4 space-y-2">
             <p><%= post.created_at.strftime('%Y年%m月%d日 %H:%M') %></p>
