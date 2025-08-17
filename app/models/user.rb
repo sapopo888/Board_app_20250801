@@ -8,4 +8,5 @@ class User < ApplicationRecord
 
   enum :status, { normal: 0, withdrawn: 1 }
   has_many :posts, dependent: :destroy
+  mount_uploader :avatar, AvatarUploader
 end
