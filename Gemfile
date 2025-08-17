@@ -68,4 +68,4 @@ end
 
 gem "devise"
 gem "devise-i18n"
-gem 'carrierwave', '~>3.0'
+gem "carrierwave", "~>3.0"
