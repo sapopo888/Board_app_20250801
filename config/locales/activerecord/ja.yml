@@ -6,4 +6,5 @@ ja:
       post:
         title: タイトル
         body: 本文
-    
+      user:
+        avatar: アバター

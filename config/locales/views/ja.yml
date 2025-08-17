@@ -5,6 +5,7 @@ ja:
       submit: 保存
       update: 更新
   header:
+    diaries: 日記帳
     posts_index: 記事一覧
     create_post: 記事作成
     my_page: マイページ
